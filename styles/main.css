@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Main — Design tokens, reset, base typography
+   ========================================================================== */
+
+@import url("utilities.css");
+@import url("layout.css");
+@import url("components.css");
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-focus: #1e40af;
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-bg: #fef2f2;
+  --color-success: #166534;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #86efac;
+  --color-error: #b91c1c;
+  --color-error-bg: #fef2f2;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #d1d5db;
+  --color-border-focus: #2563eb;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f9fafb;
+  --color-bg-help: #eff6ff;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.45);
+  --focus-ring-danger: 0 0 0 3px rgba(220, 38, 38, 0.35);
+  --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 6px;
+  --radius-lg: 8px;
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+  --transition: 150ms ease;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg-subtle);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
