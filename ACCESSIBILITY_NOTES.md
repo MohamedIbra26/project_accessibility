@@ -320,7 +320,7 @@ CSS is organized in `styles/` with design tokens in `main.css`:
 ### Full project structure
 
 ```
-pro_accessabity/
+project_accessibility/
 ├── index.html                  # Minimal shell + skip link
 ├── privacy.html                # Privacy Policy page
 ├── terms.html                  # Terms of Service page

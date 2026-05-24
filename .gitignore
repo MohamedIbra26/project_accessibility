@@ -19,9 +19,3 @@ desktop.ini
 # Logs
 *.log
 npm-debug.log*
-
-# Local Netlify
-.netlify/
-
-# Cursor (local IDE metadata)
-.cursor/
